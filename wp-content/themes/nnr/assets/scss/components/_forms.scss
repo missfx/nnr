@@ -1,0 +1,228 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 3px solid $textColor;
+  background: $textColor;
+  color: #fff;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: $rouge;
+  background: $rouge;
+  color: $textColor;
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 7px solid $textColor;
+  padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+select {
+  border: 7px solid $textColor;
+}
+
+textarea {
+  width: 100%;
+}
+
+.frm_style_style-formidable.with_frm_style .frm_blank_field input[type="text"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="password"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="url"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="tel"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="number"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="email"], .frm_style_style-formidable.with_frm_style .frm_blank_field textarea, .frm_style_style-formidable.with_frm_style .frm_blank_field .mce-edit-area iframe, .frm_style_style-formidable.with_frm_style .frm_blank_field select, .frm_form_fields_error_style, .frm_style_style-formidable.with_frm_style .frm_blank_field .frm-g-recaptcha iframe, .frm_style_style-formidable.with_frm_style .frm_blank_field .g-recaptcha iframe, .frm_style_style-formidable.with_frm_style .frm_blank_field .frm-card-element.StripeElement, .frm_style_style-formidable.with_frm_style .frm_blank_field .chosen-container-multi .chosen-choices, .frm_style_style-formidable.with_frm_style .frm_blank_field .chosen-container-single .chosen-single, .frm_style_style-formidable.with_frm_style .frm_form_field :invalid {
+  border: 7px solid $rouge;
+}
+
+.frm_forms .frm_checkbox label {
+  height: initial;
+  line-height: 1.3em;
+  input {
+    float: left
+  }
+
+  a {
+    border-bottom: none;
+    text-decoration: underline;
+    
+    &:hover {
+      color: $rouge;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  width: 35px;
+}
+
+/* CONTACT FORM 7
+   -------------------------------------------------------------------------- */
+input, textarea, select {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+}
+
+.frm_forms {
+  max-width: 50%;
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+    display: block;
+    height: 15px;
+  }
+
+  select {
+    width: 385px;
+    padding: 7px;
+  }
+
+  input {
+    max-width: 357px;
+    padding: 7px;
+  }
+
+  legend {
+    opacity: 0;
+  }
+}
+
+.frm_primary_label {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.frm_verify {
+  position: absolute;
+  left: -3000px;
+}
+
+.frm_button_submit {
+  color: #fff;
+  background-color: $textColor;
+  width: 100%;
+  padding: 13px;
+  font-size: 18px;
+  text-align: left;
+  max-width: 385px;
+  margin-top: 15px;
+
+  &:hover {
+    background-color: $rouge;
+  }
+}
+
+.frm_message {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+}
+
+#mailjetSubscriptionForm {
+  display: flex;
+
+  .mailjet-widget-form-group {
+    margin: 0;
+  }
+
+  input[type="email"] {
+    line-height: 25px;
+    width: 300px;
+  }
+
+  input[type="submit"] {
+    width: 100px;
+    line-height: 25px;
+  }
+}
+
+.mailjet_widget_form_message {
+  font-family: $font-base;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+}
+
+
+@media (max-width: 420px) {
+  #mailjetSubscriptionForm {
+    input[type="email"] {
+      width: 100%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+  .frm_forms {
+    max-width: 100%;
+  
+    select {
+      width: 100%;
+    }
+  
+    input {
+      max-width: 100;
+    }
+  } 
+
+}
+  

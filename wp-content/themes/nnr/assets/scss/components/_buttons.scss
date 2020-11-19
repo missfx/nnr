@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Btn
+--------------------------------------------------------------*/
+
+.btn, [input="submit"] {
+	position: relative;
+	clear: both;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 18px 20px 16px;
+	margin: 10px;
+	font-family: $font-btn;
+  	text-align: center;
+	line-height: 1em;
+	transition: .4s background-color ease-in-out;
+}
+.btn:after {
+	position: relative;
+	margin-top: -2px;
+	margin-left: 15px;
+	vertical-align: middle;
+	font-size: 1.4em;
+	display: inline-block;
+	line-height: 1em;
+}
+
+@mixin createBtn($labelColor, $bgColor, $borderColor:false) {
+
+	@if $labelColor {
+		color: $labelColor;
+	}
+	@else {
+		color: $firstColor;
+	}
+
+	@if $bgColor {
+		background-color: $bgColor;
+	}
+
+	@if $borderColor {
+		border: 2px solid $borderColor;
+	}
+	@else {
+		border: 2px solid $firstColor;
+	}
+
+  > span {
+  	display: inline-block;
+  }
+
+	&:hover, &:focus {
+		@include createBtnHover($labelColor, $bgColor, $borderColor);
+	}
+}
+
+@mixin createBtnHover($labelColor, $bgColor, $borderColor:false) {
+	text-decoration: none;
+
+	@if $bgColor {
+		color: $bgColor;
+	}
+	@else {
+		color: #FFF;
+	}
+
+	@if $labelColor {
+		background-color: $labelColor;
+	}
+	@else {
+		background-color: $textColor;
+	}
+}
