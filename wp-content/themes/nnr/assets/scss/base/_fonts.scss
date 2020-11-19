@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+/*
+Exemple d'ajout d'une typo locale
+
+@font-face {
+	font-family:'fonticon';
+	src:url('../fonts/fonticon.eot');
+	src:url('../fonts/fonticon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fonticon.woff') format('woff'),
+		url('../fonts/fonticon.ttf') format('truetype'),
+		url('../fonts/fonticon.svg#fonticon') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+*/
+
+@font-face {
+font-family: 'poppinsregular';
+font-style: normal;
+font-weight: 400;
+font-display: swap; /* or block, swap, fallback, optional */
+	src: url('./assets/fonts/poppins-regular-webfont.woff2') format('woff2'),
+		url('./assets/fonts/Poppins-Regular.ttf') format('truetype'),
+		url('./assets/fonts/poppins-regular-webfont.woff') format('woff');
+}
+
+
+#header *:before, #site-main *:before, #footer *:before, #adminbar *:before,
+#header *:after, #site-main *:after, #footer *:after, #adminbar *:after {
+	font-family: "CoconOT-Bold", sans-serif;
+	text-rendering:optimizeLegibility;
+	speak: none;
+}
+
+// ESSAIS SVG
+.icons_hide {
+	display: none;
+}
+.icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
