@@ -421,7 +421,7 @@ function seopress_titles_the_title() {
 
 				foreach ($matches2['1'] as $key => $value) {
 					$term = wp_get_post_terms( $post->ID, $value );
-					if (!is_wp_error($term)) {
+					if (!is_wp_error($term) && isset($term[0])) {
 						$terms = esc_attr($term[0]->name);
 						$seopress_titles_ct_template_replace_array[] = apply_filters('seopress_titles_custom_tax', $terms, $value);
 					}
@@ -1386,6 +1386,9 @@ if (seopress_titles_nositelinkssearchbox_option()) {
 }
 
 //link rel prev/next
+if(seopress_advanced_advanced_trailingslash_option()){
+	add_filter( 'get_pagenum_link', 'user_trailingslashit' );
+}
 if (seopress_titles_paged_rel_option()) {
 	function seopress_titles_paged_rel_hook() {
 		global $paged;

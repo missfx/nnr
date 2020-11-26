@@ -440,10 +440,6 @@ h5, h6 {
 }
 
 @media only screen and (max-width: 820px) {
-  h1 {
-    font-size: 3rem;
-  }
-
   h2 {
     margin-top: 4rem;
   }
@@ -1941,15 +1937,6 @@ body.page-template-page-methode .menu-toggle_burger:after {
   display: inline-block;
 }
 
-@media only screen and (max-width: 820px) {
-  #primary .header {
-    padding: 3rem 0;
-  }
-
-  #primary .header .wp-block-group__inner-container {
-    padding: 0 20px;
-  }
-}
 .home .main-navigation .linkedin svg, .home .main-navigation .tel svg, .page-id-18 .main-navigation .linkedin svg, .page-id-18 .main-navigation .tel svg {
   stroke: #fff;
 }

@@ -4,7 +4,7 @@ Tags: migration, backup, duplicate, move, migrate, restore, transfer, clone, aut
 Requires at least: 4.0
 Tested up to: 5.5
 Requires PHP: 5.2.17
-Stable tag: 1.3.38
+Stable tag: 1.3.40
 License: GPLv2
 
 WordPress migration and backups are much easier with Duplicator! Clone, backup, move and transfer an entire site from one location to another. 
@@ -38,7 +38,7 @@ Duplicator lets you make your own preconfigured sites to eliminate rework.  Inst
 = Duplicator Pro =
 Duplicator Pro takes Duplicator to the next level with features you'll really appreciate, such as:
 
-* Drag and Drop site overwrites - just drag an archive to the destination site to install!
+* Drag and Drop installs - just drag an archive to the destination site!
 * Scheduled backups
 * Cloud Storage to Dropbox, Google Drive, Microsoft OneDrive, Amazon S3 and FTP/SFTP
 * A special 2-step streamlined installer mode for mega-fast installs

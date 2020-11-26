@@ -20,13 +20,13 @@
 			<div class="grid20">
 				<ul>
 					<li>
-						<a href="mailto:contact@nantes-numerique-responsable.org">→ Email</a>
+						<a href="">→ Email</a>
 					</li>
 					<li>
-						<a href="https://twitter.com/NantesNR" target="_blank">→ Twitter</a>
+						<a href="">→ Twitter</a>
 					</li>
 					<li>
-						<a href="https://www.meetup.com/fr-FR/nantesnr/" target="_blank">→ Meetup</a>
+						<a href="">→ Meetup</a>
 					</li>
 				</ul>
 			</div>
