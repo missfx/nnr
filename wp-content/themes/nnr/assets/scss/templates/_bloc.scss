@@ -1,0 +1,99 @@
+.size-large {
+  padding: 0;
+  margin: 0;
+}
+
+// Conteneur
+.listBlocs {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+// Bloc
+.listBloc {
+  padding: 10px;
+}
+
+// Element
+.listLink {
+  position: relative;
+  display: block;
+  background: #FFF;
+  border: 0;
+  height: 100%; // /!\ not working on Safari
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+
+
+  &:hover .listContent h2, &:focus .listContent h2 {
+    color: $secondColor;
+  }
+  &:hover .listVisuel:before, &:focus .listVisuel:before,
+  &:hover .listVisuel:after, &:focus .listVisuel:after {
+    opacity: 1;
+  }
+}
+.listVisuel {
+  position: relative;
+
+  &:before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-align: center;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+  }
+}
+.listContent {
+  padding: 20px;
+
+  h2 {
+    text-transform: none;
+    color: $firstColor;
+    transition: color .4s ease-in-out;
+  }
+}
+.listDate {
+  display: inline-block;
+  color: #FFF;
+  background: $firstColor;
+  padding: 0 10px;
+  margin: 0 0 5px;
+}
+
+.readMore {
+  font-style: italic;
+  text-decoration:none;
+	color: $firstColor;
+	border-bottom: 1px $firstColor dotted;
+
+	&:hover, &:focus, &:active {
+		outline: 0;
+		text-decoration: none;
+		border-bottom-style: solid;
+	}
+}
+
+@media only screen and (min-width:520px) and (max-width:820px) {
+  .listBloc.grid33 {
+    flex: 50%;
+		max-width: 50%;
+  }
+}

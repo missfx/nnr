@@ -1,0 +1,76 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+
+/* Global CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3ac1e;
+}
+
+/* Grids */
+.innerWidth, .innerSmallWidth {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.innerWidth {
+	max-width: 1240px;
+}
+.innerSmallWidth {
+	max-width: 900px;
+}
+
+.fullGrid {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.fullGrid > * {
+	flex: 100%;
+}
+
+@media only screen and (min-width:820px) {
+	.fullGrid > * {
+		flex: 50%;
+		max-width: 50%;
+	}
+	.revGrid {
+		flex-direction: row-reverse;
+	}
+
+	/** Définition des grilles
+	  * --------------------------------------------- */
+	.grid20 { flex: 20%; max-width: 20%; }
+	.grid25 { flex: 25%; max-width: 25%; }
+	.grid30 { flex: 30%; max-width: 30%; }
+	.grid33 { flex: calc(100%/3); max-width: calc(100%/3); }
+	.grid40 { flex: 40%; max-width: 40%; }
+	.grid60 { flex: 60%; max-width: 60%; }
+	.grid66 { flex: calc(100%*2/3); max-width: calc(100%*2/3); }
+	.grid75 { flex: 75%; max-width: 75%; }
+	.grid80 { flex: 80%; max-width: 80%; }
+	.grid100 { flex: 100%; max-width: 100%; }
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+/* Manifeste */
+.main {
+    font-size: 20px;
+}
