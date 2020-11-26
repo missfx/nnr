@@ -30,7 +30,6 @@ function gutenberg_starter_theme_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'gutenberg_starter_theme_pingback_header' );
-
 add_action( ‘init’, ‘register_my_cpt_membres’, 10 );
 function register_my_cpt_membres() {
 register_post_type( “membres”, array (
