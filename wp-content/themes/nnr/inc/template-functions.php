@@ -78,3 +78,56 @@ register_post_type( "membres", array (
     )
     );
 }
+
+
+/**
+ * Custom Post Type pour les événements
+ */
+function register_my_cpt_evenement() {
+    register_post_type( "evenements", array (
+        'labels' =>
+            array (
+                'name' => 'Evénements',
+                'singular_name' => 'Evénement',
+                'add_new' => 'Ajouter',
+                'add_new_item' => 'Ajouter un nouveau événement',
+                'edit_item' => 'Modifier l\'événements',
+                'new_item' => 'Nouveau événement',
+                'view_item' => 'Voir l\'événement',
+                'search_items' => 'Chercher un événement',
+                'not_found' => 'Aucun événement trouvé',
+                'not_found_in_trash' => 'Aucun événements trouvé dans la corbeille',
+                'parent_item_colon' => 'événement parent:',
+            ),
+            'description' => '',
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'map_meta_cap' => true,
+            'capability_type' => 'post',
+            'public' => true,
+            'hierarchical' => false,
+            'rewrite' =>
+            array (
+                'slug' => 'liste-evenements',
+                'with_front' => true,
+                'pages' => true,
+                'feeds' => true,
+            ),
+            'has_archive' => true,
+            'query_var' => 'evenements',
+            'supports' =>
+            array (
+                0 => 'title',
+                1 => 'editor',
+                3 => 'thumbnail'
+            ),
+            'show_ui' => true,
+            'menu_position' => 30,
+            'menu_icon' => false,
+            'can_export' => true,
+            'show_in_nav_menus' => true,
+            'show_in_menu' => true,
+        )
+    );
+}
+add_action( 'init', 'register_my_cpt_evenement', 11 );
