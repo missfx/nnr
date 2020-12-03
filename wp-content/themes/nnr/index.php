@@ -16,36 +16,48 @@ get_header(); ?>
 
 	<main id="primary" class="site-main">
 
+	<?php $sticky = get_option('sticky_posts');
+	$args = array(
+			'posts_per_page' => 1,
+			'post__in' => $sticky,
+			'ignore_sticky_posts' => 1
+	);
+	$posts = new WP_Query($args);
+	if (isset($sticky[0])) {
+		?>
+	<h2><?= $posts->posts[0]->post_title ?></h2>
+	<p><?= $posts->posts[0]->post_content ?></p>
 	<?php
-	if ( have_posts() ) :
+	}
 
-		if ( is_home() && ! is_front_page() ) : ?>
-			<header>
-				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-			</header>
+	$args = array(
+			'posts_per_page' => 4,
+			'post__not_in' => $sticky,
+			"cat" => 1,
 
-		<?php
-		endif;
+	);
 
-		/* Start the Loop */
-		while ( have_posts() ) : the_post();
+	$query = new WP_Query($args);
+		while ($query -> have_posts()) :
+			$query->the_post();
+	?>
+	<h2><?=the_title()?></h2>
+	<span>Posté le <?= get_the_date(); ?>, par <?= get_the_author(); ?></span>
+	<p> <?= the_excerpt(); ?> </p>
+	<a href="<?=the_permalink()?>" rel="bookmark">Lire la suite</a>
 
-			/*
-				* Include the Post-Format-specific template for the content.
-				* If you want to override this in a child theme, then include a file
-				* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				*/
-			get_template_part( 'template-parts/content', get_post_format() );
+<?php
+       
+    endwhile;
+    wp_reset_postdata();
+    $args = array(
+        'post__not_in' => $sticky,
+        "cat" => 1,
 
-		endwhile;
+    );
+    $query = new WP_Query($args);
 
-		the_posts_navigation();
-
-	else :
-
-		get_template_part( 'template-parts/content', 'none' );
-
-	endif; ?>
+?>
 
 	</main><!-- #primary -->
 
