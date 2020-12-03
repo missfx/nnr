@@ -1,0 +1,68 @@
+/* page 404 */
+.error404 #primary {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #1c72f2;
+
+	.error-404{
+		padding: 0 10%;
+		@media screen and (max-width: 580px) {padding: 0 20px;}
+
+		.page-header .page-title{
+			color: white;
+			font-size: 5em;
+			margin: 0;
+		}
+
+		.page-content{
+			p{
+				color: white;
+				font-size: 1.5em;
+			}
+
+			.search-form{
+				display: flex;
+
+				label {
+					.screen-reader-text{
+						display: none;
+					}
+					.search-field{
+						width: inherit;
+						padding: 10px;
+						font-size: 1em;
+						line-height: 1.2em;
+						min-width: 300px;
+
+						@media screen and (max-width: 580px) {
+							padding: 5px;
+							min-width: inherit;
+						}
+
+						&::selection{
+							background: #250E07;
+						}
+					}
+				}
+
+				.search-submit{
+					width: inherit;
+					border: 7px solid #250E07;
+					border-left: none;
+
+					&:hover{
+						background: white;
+						color: #250E07;
+					}
+				}
+			}
+		}
+		.page-header .page-title, .page-content p{
+			margin: 0.5em 0;
+		}
+	}
+}
