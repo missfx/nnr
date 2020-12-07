@@ -11,25 +11,38 @@ get_header(); ?>
 
 	<main id="primary" class="site-main">
 
-	<?php
-	while ( have_posts() ) : the_post();
+	<?php while ( have_posts() ) : the_post(); ?>
 
-		get_template_part( 'template-parts/content', get_post_type() );
+		<article id="post-<?php the_ID(); ?>" <?php post_class('single-article'); ?>>
+			<div class="entry-content">
 
-		the_post_navigation( array(
-			'prev_text' => '&larr; %title',
-			'next_text' => '%title &rarr;',
-		) );
+				<header class="header alignfull">
+					<h1><?php the_title(); ?></h1>
+				</header>
 
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
+				<div class="page-content">
+					<?php the_content(); ?>
 
-	endwhile; // End of the loop.
-	?>
+					<p class="published-date">Publié le <?php the_date(); ?></p>
 
-	</main><!-- #primary -->
+					<div class="share">
+						<ul>
+							<li>Partager :</li>
+							<li><a href="#">&rarr; Linkedin</a></li>
+							<li><a href="#">&rarr; Twitter</a></li>
+							<li><a href="#">&rarr; Facebook</a></li>
+							<li><a href="#">&rarr; Copier l'url</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</article>
+
+	<?php endwhile; ?>
+	
+
+	</main>
 
 <?php
 get_footer();
