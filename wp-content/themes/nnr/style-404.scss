@@ -11,6 +11,9 @@
 	.error-404{
 		padding: 0 10%;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5395feeae555be609bd9261e8f0053f4ebf76435
 		
 		@media screen and (max-width: 580px) {padding: 0 20px;}
 
@@ -19,6 +22,7 @@
 			font-size: 5em;
 			margin: 0;
 		}
+<<<<<<< HEAD
 =======
 	}
 >>>>>>> 9ccb15ba0831938dcfc4fa059533ce829c949ffe
@@ -81,4 +85,54 @@
 			min-width: inherit;
 		}
 	}	
+=======
+
+		.page-content{
+			p{
+				color: white;
+				font-size: 1.5em;
+			}
+
+			.search-form{
+				display: flex;
+
+				label {
+					.screen-reader-text{
+						display: none;
+					}
+					.search-field{
+						width: inherit;
+						padding: 10px;
+						font-size: 1em;
+						line-height: 1.2em;
+						min-width: 300px;
+
+						@media screen and (max-width: 580px) {
+							padding: 5px;
+							min-width: inherit;
+						}
+
+						&::selection{
+							background: #250E07;
+						}
+					}
+				}
+
+				.search-submit{
+					width: inherit;
+					border: 7px solid #250E07;
+					border-left: none;
+
+					&:hover{
+						background: white;
+						color: #250E07;
+					}
+				}
+			}
+		}
+		.page-header .page-title, .page-content p{
+			margin: 0.5em 0;
+		}
+	}
+>>>>>>> 5395feeae555be609bd9261e8f0053f4ebf76435
 }
