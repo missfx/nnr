@@ -161,3 +161,23 @@ register_taxonomy('cat-evenement', array('evenement'), array(
       ),
     )
   );
+
+// FILTER
+function get_liste_cpt_sidebar() {?>
+    <aside>
+        <h3 class="widget-title"></h3>
+        <form id="liste_cpt" method="get" name="liste_cpt">
+         <?php 
+            $select = wp_dropdown_pages('show_option_none=Sélection%20bibliothèque&depth=1&sort_column=menu_order&echo=0');
+            $select = preg_replace("#]*)>#", "", $select);
+            echo $select;
+         ?>
+        <noscript>
+        <input type="submit" name="submit" value="view" />
+        </noscript>
+        </form>
+    </aside>
+<?php
+}
+?>
+    
