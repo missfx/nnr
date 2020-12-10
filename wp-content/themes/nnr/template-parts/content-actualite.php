@@ -7,8 +7,11 @@
     $posts = new WP_Query($args);
     if (isset($sticky[0])) {
         ?>
-<h2><?= $posts->posts[0]->post_title ?></h2>
-<p><?= $posts->posts[0]->post_content ?></p>
+<article class="grid60" id="first">
+    <h2><?= $posts->posts[0]->post_title ?></h2>
+    <p><?= $posts->posts[0]->post_excerpt ?></p>
+    <a class="wp-block-button__link has-text-color has-background" href="<?=the_permalink()?>" style="background-color:#fc611f;color:#1247ce" target="_blank" rel="noreferrer noopener">Lire la suite</a>
+</article>
 <?php
     }
 
@@ -23,10 +26,20 @@
         while ($query -> have_posts()) :
             $query->the_post();
     ?>
-<h2><?=the_title()?></h2>
-<span>Posté le <?= get_the_date(); ?>, par <?= get_the_author(); ?></span>
-<p> <?= the_excerpt(); ?> </p>
-<a href="<?=the_permalink()?>" rel="bookmark">Lire la suite</a>
+<article class="grid60">
+
+
+    <div class="side">
+        <h2><?=the_title()?></h2>
+        <p> <?= the_excerpt(); ?> </p>
+    </div>
+    <div class="side">
+        <?php
+            the_post_thumbnail();
+        ?>
+        <a class="wp-block-button__link has-text-color has-background" href="<?=the_permalink()?>" style="background-color:#fc611f;color:#1247ce" target="_blank" rel="noreferrer noopener">Lire la suite</a>
+    </div>
+</article>
 
 <?php
        
