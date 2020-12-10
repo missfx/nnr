@@ -91,7 +91,7 @@ function register_my_cpt_evenement() {
                 'singular_name' => 'Evénement',
                 'add_new' => 'Ajouter',
                 'add_new_item' => 'Ajouter un nouveau événement',
-                'edit_item' => 'Modifier l\'événements',
+                'edit_item' => 'Modifier les événements',
                 'new_item' => 'Nouveau événement',
                 'view_item' => 'Voir l\'événement',
                 'search_items' => 'Chercher un événement',
@@ -128,7 +128,36 @@ function register_my_cpt_evenement() {
             'can_export' => true,
             'show_in_nav_menus' => true,
             'show_in_menu' => true,
+            'taxonomies' => array(
+                /* 'post_tag', */ // Etiquette
+                'cat-evenement'
+            ) // Add Category and Post Tags support
         )
     );
 }
 add_action( 'init', 'register_my_cpt_evenement', 11 );
+
+
+//TODO Ajout d'une taxonomy (etiquette) du nom "cat-evenement" pour les événements
+register_taxonomy('cat-evenement', array('evenement'), array(
+    'hierarchical' => true,
+      'labels' => array(
+          'name' => __( 'cat-evenement' ),
+          'singular_name' => __( 'cat-evenement' ),
+          'search_items' =>  __( 'Rechercher une cat-evenement' ),
+          'all_items' => __( 'Toutes les cat-evenement' ),
+          'edit_item' => __( 'Editer les cat-evenement' ),
+          'update_item' => __( 'Mettre à jour la cat-evenement' ),
+          'add_new_item' => __( 'Ajouter une nouvelle cat-evenement' ),
+          'new_item_name' => __( 'Nom de la nouvelle cat-evenement' ),
+          'menu_name' => __( 'cat-evenement' ),
+      ),
+      'rewrite' => array(
+          'slug' => 'cat-evenement',
+          'with_front' => true,
+          'hierarchical' => true,
+          'show_admin_column' => true,
+          'show_ui' => true,
+      ),
+    )
+  );
