@@ -28,14 +28,20 @@ get_header(); ?>
 					<div class="share">
 						<ul>
 							<li>Partager :</li>
-							<li><a href="#">&rarr; Linkedin</a></li>
-							<li><a href="#">&rarr; Twitter</a></li>
-							<li><a href="#">&rarr; Facebook</a></li>
+							<li>
+								<a href="https://www.linkedin.com/cws/share?url=<?php the_permalink() ?>" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=400');return false;">&rarr; Linkedin</a>
+							</li>
+							<li>
+								<a href="http://twitter.com/share?text=<?php the_title() ?>&url=<?php the_permalink() ?>" onclick="window.open(this.href, 'twitter-share', 'width=600,height=400');return false;">&rarr; Twitter</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink() ?>" onclick="window.open(this.href, 'facebook-share','width=600,height=400');return false;">&rarr; Facebook</a>
+							</li>
 							<li><a href="#">&rarr; Copier l'url</a></li>
 						</ul>
 					</div>
+				
 				</div>
-
 			</div>
 		</article>
 
