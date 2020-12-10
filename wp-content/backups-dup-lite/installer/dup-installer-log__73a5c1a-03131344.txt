@@ -1,0 +1,395 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 12:47:47
+* VERSION: 1.3.40
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.4.12                                |7.2.19
+OS__________________: Linux                                 |WINNT
+CREATED_____________: 2020-12-03 13:13:44
+WP VERSION__________: 5.5.3
+DUP VERSION_________: 1.3.40
+DB__________________: 5.7.32
+DB TABLES___________: 13
+DB ROWS_____________: 335
+DB FILE SIZE________: 1.86MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.2.19 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19
+DOC ROOT____________: "E:/laragon/www/FRONT/DEV2/NNR"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://localhost/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "ziparchive"
+SET DIR PERMS_______: 0
+DIR PERMS VALUE_____: 644
+SET FILE PERMS______: 0
+FILE PERMS VALUE____: 755
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "E:/laragon/www/FRONT/DEV2/NNR/20201022_nantesnumeriqueresponsable_[HASH]_20201203131344_archive.zip"
+SIZE________________: 26.5MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+
+
+START ZIP FILE EXTRACTION STANDARD >>> 
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "E:/laragon/www/FRONT/DEV2/NNR/20201022_nantesnumeriqueresponsable_[HASH]_20201203131344_archive.zip"
+SIZE________________: 26.5MBFile timestamp set to Current: 2020-12-10 12:47:49
+<<< ZipArchive Unzip Complete: true
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+
+PERMISSION UPDATES: None Applied
+
+STEP-1 COMPLETE @ 12:47:49 - RUNTIME: 1.9946 sec.
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 12:48:18
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.24 -- Build Server: 5.7.32
+FILE SIZE:	dup-database__[HASH].sql (658.37KB)
+TIMEOUT:	5000
+MAXPACK:	536870912
+SQLMODE:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[E:/laragon/www/FRONT/DEV2/NNR/dup-installer/dup-installer-data__[HASH].sql]
+COLLATE FB:	Off
+
+NOTICE: This servers version [5.7.24] is less than the build version [5.7.32].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+[PHP ERR][WARN] MSG:count(): Parameter must be an array or an object that implements Countable [CODE:2|FILE:E:\laragon\www\FRONT\DEV2\NNR\dup-installer\ctrls\ctrl.s2.dbinstall.php|LINE:393]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	401
+
+nnr_commentmeta: (0)
+nnr_comments: (1)
+nnr_duplicator_packages: (0)
+nnr_links: (0)
+nnr_options: (160)
+nnr_postmeta: (86)
+nnr_posts: (49)
+nnr_term_relationships: (5)
+nnr_term_taxonomy: (2)
+nnr_termmeta: (0)
+nnr_terms: (2)
+nnr_usermeta: (40)
+nnr_users: (2)
+Removed '38' cache/transient rows
+
+INSERT DATA RUNTIME: 0.3491 sec.
+STEP-2 COMPLETE @ 12:48:19 - RUNTIME: 0.3638 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 12:48:49
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "Nantes Numérique Responsable"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr"
+path_new______________: "E:/laragon/www/FRONT/DEV2/NNR"
+siteurl_______________: "http://localhost"
+url_old_______________: "http://nnr.velvetcocoon.com"
+url_new_______________: "http://localhost"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_mail_______________: "bezedache29@gmail.com"
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "nnr_commentmeta"_________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "nnr_comments"____________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_duplicator_packages"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "nnr_links"_______________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "nnr_options"_____________________________________[ROWS:   160][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_postmeta"____________________________________[ROWS:    86][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_posts"_______________________________________[ROWS:    49][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_term_relationships"__________________________[ROWS:     5][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_term_taxonomy"_______________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_termmeta"____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "nnr_terms"_______________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_usermeta"____________________________________[ROWS:    40][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+
+EVALUATE TABLE: "nnr_users"_______________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/clients/07d9f05afca9dbaa3c8a4ae6256822f2/web/preprod/nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  2:"\/home\/clients\/07d9f05afca9dbaa3c8a4ae6256822f2\/web\/preprod\/nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  3:"%2Fhome%2Fclients%2F07d9f05afca9dbaa3c8a4ae6256822f2%2Fweb%2Fpreprod%2Fnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  4:"\home\clients\07d9f05afca9dbaa3c8a4ae6256822f2\web\preprod\nnr" => "E:/laragon/www/FRONT/DEV2/NNR"
+	SEARCH  5:"\\home\\clients\\07d9f05afca9dbaa3c8a4ae6256822f2\\web\\preprod\\nnr" => "E:\/laragon\/www\/FRONT\/DEV2\/NNR"
+	SEARCH  6:"%5Chome%5Cclients%5C07d9f05afca9dbaa3c8a4ae6256822f2%5Cweb%5Cpreprod%5Cnnr" => "E%3A%2Flaragon%2Fwww%2FFRONT%2FDEV2%2FNNR"
+	SEARCH  7:"//nnr.velvetcocoon.com" ==========================> "//localhost"
+	SEARCH  8:"\/\/nnr.velvetcocoon.com" ========================> "\/\/localhost"
+	SEARCH  9:"%2F%2Fnnr.velvetcocoon.com" ======================> "%2F%2Flocalhost"
+	SEARCH 10:"https://localhost" ===============================> "http://localhost"
+	SEARCH 11:"https:\/\/localhost" =============================> "http:\/\/localhost"
+	SEARCH 12:"https%3A%2F%2Flocalhost" =========================> "http%3A%2F%2Flocalhost"
+--------------------------------------
+SCANNED:	Tables:13 	|	 Rows:347 	|	 Cells:2341 
+UPDATED:	Tables:4 	|	 Rows:55 	|	 Cells:81 
+ERRORS:		0 
+RUNTIME:	0.063000 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+NEW WP-ADMIN USER:
+- New username 'admin' was created successfully allong with MU usermeta.
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME ""nnr""
+	UPDATE DB_USER ""root""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache '.htaccess__[HASH]' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Deactivated plugins list here: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 12:48:49 - RUNTIME: 0.1268 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================
