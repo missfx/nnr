@@ -18,8 +18,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: $rouge;
-  background: $rouge;
+  border-color: red;
+  background: red;
   color: $textColor;
 }
 
@@ -82,7 +82,7 @@ textarea {
 }
 
 .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="text"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="password"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="url"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="tel"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="number"], .frm_style_style-formidable.with_frm_style .frm_blank_field input[type="email"], .frm_style_style-formidable.with_frm_style .frm_blank_field textarea, .frm_style_style-formidable.with_frm_style .frm_blank_field .mce-edit-area iframe, .frm_style_style-formidable.with_frm_style .frm_blank_field select, .frm_form_fields_error_style, .frm_style_style-formidable.with_frm_style .frm_blank_field .frm-g-recaptcha iframe, .frm_style_style-formidable.with_frm_style .frm_blank_field .g-recaptcha iframe, .frm_style_style-formidable.with_frm_style .frm_blank_field .frm-card-element.StripeElement, .frm_style_style-formidable.with_frm_style .frm_blank_field .chosen-container-multi .chosen-choices, .frm_style_style-formidable.with_frm_style .frm_blank_field .chosen-container-single .chosen-single, .frm_style_style-formidable.with_frm_style .frm_form_field :invalid {
-  border: 7px solid $rouge;
+  border: 7px solid red;
 }
 
 .frm_forms .frm_checkbox label {
@@ -97,7 +97,7 @@ textarea {
     text-decoration: underline;
     
     &:hover {
-      color: $rouge;
+      color: red;
     }
   }
 }
@@ -164,7 +164,7 @@ input, textarea, select {
   margin-top: 15px;
 
   &:hover {
-    background-color: $rouge;
+    background-color: red;
   }
 }
 
