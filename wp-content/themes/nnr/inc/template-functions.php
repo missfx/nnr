@@ -168,9 +168,10 @@ function get_liste_cpt_sidebar() {?>
         <h3 class="widget-title"></h3>
         <form id="liste_cpt" method="get" name="liste_cpt">
          <?php 
-            $select = wp_dropdown_pages('show_option_none=Sélection%20bibliothèque&depth=1&sort_column=menu_order&echo=0');
-            $select = preg_replace("#]*)>#", "", $select);
+            $select = wp_dropdown_categories('show_option_none=Sélection%20bibliothèque&depth=1&taxonomy=cat-evenement&sort_column=menu_order&echo=0');
             echo $select;
+            // $select = preg_replace("#]*)>#", "", $select);
+            // echo $select;
          ?>
         <noscript>
         <input type="submit" name="submit" value="view" />
