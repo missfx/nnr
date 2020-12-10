@@ -1,7 +1,5 @@
 # Gutenberg Starter Theme
 
-aaaaa
-
 The Gutenberg Starter theme is designed to provide a simple, interference-free theme for testing Gutenberg. It uses no editor styles by default, and is built so that its front-end appearance is as close to the editor's default Gutenberg styles as possible. 
 
 The theme is primarily intended for use by those developing for and testing Gutenberg, but may also be helpful for those developing themes, or for folks who would like their site to look like Gutenberg in general. 

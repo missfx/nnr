@@ -114,6 +114,7 @@ function register_my_cpt_evenement() {
                 'feeds' => true,
             ),
             'has_archive' => true,
+            'rewrite'    => array( 'slug' => 'liste-evenements' ), // my custom slug
             'query_var' => 'evenements',
             'supports' =>
             array (

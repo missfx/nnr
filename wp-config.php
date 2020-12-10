@@ -22,19 +22,24 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'w6127_nnr' );
+define( 'DB_NAME', "nnr" );
+
 
 /** Utilisateur de la base de données MySQL. */
-define( 'DB_USER', 'w6127_steph' );
+define( 'DB_USER', "root" );
+
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', 'i3baSCBwjJIR' );
+define( 'DB_PASSWORD', "" );
+
 
 /** Adresse de l’hébergement MySQL. */
-define( 'DB_HOST', 'w6127.myd.infomaniak.com' );
+define( 'DB_HOST', "localhost" );
+
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
+
 
 /**
  * Type de collation de la base de données.
@@ -54,13 +59,21 @@ define( 'DB_COLLATE', '' );
  * @since 2.6.0
  */
 define( 'AUTH_KEY',         'g[?XA |d,fVQYJ?!ksX%556czppm(<U]A<mjzp[3-);$(W5X^T%`z5_f&~]E%OE=' );
+
 define( 'SECURE_AUTH_KEY',  'o*ZJEV}ub{nt@!Q5-GQVh0S)I^]jKg9/Qi]4R?[UcwQH4-_Q#7zFh4$jE]XPGIkA' );
+
 define( 'LOGGED_IN_KEY',    '<owsr#iMJbRRrXqRhLcJEhHa._|m,Hz Q`wg`!=WA8.EE#?ew9nx<ILc1#nvyVIx' );
+
 define( 'NONCE_KEY',        '8T,khXaW+-S[RM)kM^2A144AdJ)oHl}8$Kw.AHW*284K|3GHb:JfGz9{j{2xoqee' );
+
 define( 'AUTH_SALT',        '1IaviAk L>81^pwP3A;dm7SZD1`PCx3[<O*k4R^sdI{?r}545jLHwD2U@D/P&MK}' );
+
 define( 'SECURE_AUTH_SALT', '(=Jz?QbVM<HCG_4N<anR7e=C/,q&QFOe9ORXykDFcs#I;c7)]{U#K,!+$!fn>TCB' );
+
 define( 'LOGGED_IN_SALT',   'd3E.oksWzoO$/?HKWqcp9iyE$fX#Y$Yd74v2dAAHKR*FNVi!w9|@VlCoM;s! fR1' );
+
 define( 'NONCE_SALT',       '.0-D,JjG!laxpReQz+NFP&8;I1Khi-%_)TqLiqmNA~^Odd}(QK=EtM/)Sd3MptML' );
+
 /**#@-*/
 
 /**
@@ -71,6 +84,7 @@ define( 'NONCE_SALT',       '.0-D,JjG!laxpReQz+NFP&8;I1Khi-%_)TqLiqmNA~^Odd}(QK=
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
 $table_prefix = 'nnr_';
+
 
 /**
  * Pour les développeurs : le mode déboguage de WordPress.

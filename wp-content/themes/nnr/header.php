@@ -23,18 +23,18 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-		<header id="masthead" class="site-header">
+	<!--	<header id="masthead" class="site-header">
 			<div class="site-branding">
 				NNR
 			</div>
 
 			<nav id="site-navigation" class="main-navigation">
 				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
+					//wp_nav_menu( array(
+					//	'theme_location' => 'menu-1',
+					//	'menu_id'        => 'primary-menu',
+					//) );
 				?>
 			</nav>
 		</header>
-
+	-->

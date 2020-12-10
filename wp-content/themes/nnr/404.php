@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<section class="error-404 not-found">
 			<header class="page-header">
-				<h1 class="page-title">Oups ! Cette page n'existe pas.</h1>
+				<h1 class="page-title">Oops ! Cette page n'existe pas.</h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">

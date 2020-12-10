@@ -46,6 +46,9 @@ class Document_Settings_Section {
 			$post_type = $post->post_type;
 			$origin = 'post';
 			$keywords = get_post_meta( $post_id, '_seopress_analysis_target_kw', true );
+			if ( class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+				$is_elementor = true;
+			}
 		}
 
 		$seopress_real_preview = array(
@@ -56,7 +59,8 @@ class Document_Settings_Section {
 			'post_type' => $post_type,
 			'post_tax' => $term,
 			'origin' => $origin,
-			'keywords' => $keywords
+			'keywords' => $keywords,
+			'is_elementor' => $is_elementor
 		);
 		
         wp_localize_script( 'seopress-elementor-base-script', 'seopressElementorBase', $seopress_real_preview );
@@ -275,7 +279,7 @@ class Document_Settings_Section {
 					'_seopress_robots_primary_cat',
 					[
 						'label' => __( 'Select a primary category', 'wp-seopress' ),
-						'description' => __('Set the category that gets used in the %category% permalink if you have multiple categories.','wp-seopress'),
+						'description' => __('Set the category that gets used in the %category% permalink and in our breadcrumbs if you have multiple categories.','wp-seopress'),
 						'type' => \Elementor\Controls_Manager::SELECT,
 						'label_block' => true,
 						'separator' => 'none',
@@ -292,7 +296,8 @@ class Document_Settings_Section {
 			$document->add_control(
 				'_seopress_robots_breadcrumbs',
 				[
-					'label' => __( 'Enter a custom value, useful if your title is too long', 'wp-seopress' ),
+					'label' => __( 'Custom breadcrumbs', 'wp-seopress' ),
+					'description' => __( 'Enter a custom value, useful if your title is too long', 'wp-seopress' ),
 					'type' => \Elementor\Controls_Manager::TEXT,
 					'label_block' => true,
 					'separator' => 'none',
@@ -646,34 +651,43 @@ class Document_Settings_Section {
 	 * @return  void
 	 */
 	public function on_seopress_meta_save( $post_id ) {
-		$meta = get_post_meta( $post_id );
-
-		$seopress_meta = array_filter(
-			$meta,
-			function( $key ) {
-				return in_array( $key, $this->get_allowed_meta_keys(), true );
-			},
-			ARRAY_FILTER_USE_KEY
-		);
-		
-		if ( empty( $seopress_meta ) ) {
-			return;
-		}
-
-		$settings = array();
-
-		foreach ( $seopress_meta as $key => $sm ) {
-			$settings[ $key ] = maybe_unserialize( ! empty( $sm[0] ) ? $sm[0] : '' );
-		}
-
-		$seo_data['settings'] = $settings;
-
 		if ( ! class_exists( '\Elementor\Core\Settings\Manager' ) ) {
 			return;
 		}
 
-		$page_settings_manager = \Elementor\Core\Settings\Manager::get_settings_managers( 'page' );
-		$page_settings_manager->save_settings( $settings, $post_id );
+		if ( class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+
+			$meta = get_post_meta( $post_id );
+
+			$seopress_meta = array_filter(
+				$meta,
+				function( $key ) {
+					return in_array( $key, $this->get_allowed_meta_keys(), true );
+				},
+				ARRAY_FILTER_USE_KEY
+			);
+			
+			if ( empty( $seopress_meta ) ) {
+				return;
+			}
+
+			$settings = array();
+
+			foreach ( $seopress_meta as $key => $sm ) {
+				$settings[ $key ] = maybe_unserialize( ! empty( $sm[0] ) ? $sm[0] : '' );
+			}
+
+			$seo_data['settings'] = $settings;
+
+			$page_settings = get_metadata( 'post', $post_id, \Elementor\Core\Settings\Page\Manager::META_KEY, true);
+			$settings = array_merge( $page_settings, $settings );
+			
+			remove_action( 'seopress/page-builders/elementor/save_meta', [ $this, 'on_seopress_meta_save' ], 99 );
+			$page_settings_manager = \Elementor\Core\Settings\Manager::get_settings_managers( 'page' );
+			$page_settings_manager->ajax_before_save_settings( $settings, $post_id );
+			$page_settings_manager->save_settings( $settings, $post_id );
+			add_action( 'seopress/page-builders/elementor/save_meta', [ $this, 'on_seopress_meta_save' ], 99 );
+		}
 	}
 
 	public function get_allowed_meta_keys() {

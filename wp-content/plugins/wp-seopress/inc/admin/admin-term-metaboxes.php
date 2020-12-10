@@ -194,6 +194,11 @@ function seopress_display_seo_term_metaboxe() {
         wp_enqueue_script( 'seopress-cpt-tabs-js', plugins_url( 'assets/js/seopress-tabs2.js', dirname(dirname(__FILE__ ))), array( 'jquery-ui-tabs' ), SEOPRESS_VERSION);
 
         if ("seopress_404" != $typenow) {
+            //Tagify
+			wp_enqueue_script( 'seopress-tagify-js', plugins_url( 'assets/js/tagify.min.js', dirname( dirname( __FILE__ ) ) ), [ 'jquery' ], SEOPRESS_VERSION, true );
+			wp_register_style('seopress-tagify', plugins_url('assets/css/tagify.min.css', dirname( dirname( __FILE__ ) ) ), [], SEOPRESS_VERSION);
+            wp_enqueue_style('seopress-tagify');
+            
             //Register Google Snippet Preview / Content Analysis JS
             wp_enqueue_script( 'seopress-cpt-counters-js', plugins_url( 'assets/js/seopress-counters.min.js', dirname(dirname( __FILE__ ))), array( 'jquery', 'jquery-ui-tabs', 'jquery-ui-accordion' ), SEOPRESS_VERSION );
 
@@ -275,6 +280,7 @@ function seopress_display_seo_term_metaboxe() {
         $seopress_redirections_type        = get_term_meta($term->term_id,'_seopress_redirections_type',true);
         $seopress_redirections_value       = get_term_meta($term->term_id,'_seopress_redirections_value',true);
 
+        require_once ( dirname( __FILE__ ) . '/admin-dyn-variables-helper.php'); //Dynamic variables
         require_once ( dirname( __FILE__ ) . '/admin-metaboxes-form.php'); //Metaboxe HTML
     }
 

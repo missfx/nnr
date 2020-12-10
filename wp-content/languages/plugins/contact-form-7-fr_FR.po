@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-11 17:42:05+0000\n"
+"PO-Revision-Date: 2020-12-06 17:30:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -319,7 +319,7 @@ msgstr "Comment résoudre ?"
 
 #: admin/includes/welcome-panel.php:63
 msgid "Your donation will help encourage and support the plugin&#8217;s continued development and better user support."
-msgstr "Votre don aidera à encourager et soutenir le développement continu de l’extension et un meilleur support aux utilisateurs."
+msgstr "Votre don aidera à encourager et soutenir le développement continu de l’extension et un meilleur support aux utilisateurs et utilisatrices."
 
 #: admin/includes/welcome-panel.php:58
 msgid "making a donation"
@@ -332,11 +332,11 @@ msgstr "Si vous aimez utiliser Contact Form 7 et que vous le trouvez utile, veui
 
 #: admin/includes/welcome-panel.php:50
 msgid "It is hard to continue development and support for this plugin without contributions from users like you."
-msgstr "Il est difficile de continuer le développement et le support de cette extension sans les contributions d’utilisateurs comme vous."
+msgstr "Il est difficile de continuer le développement et le support de cette extension sans les contributions d’utilisateurs et d’utilisatrices comme vous."
 
 #: includes/contact-form.php:325 includes/contact-form.php:753
 msgid "This contact form is available only for logged in users."
-msgstr "Ce formulaire de contact est uniquement disponible pour les utilisateurs enregistrés"
+msgstr "Ce formulaire de contact est uniquement disponible pour les comptes enregistrés."
 
 #: includes/config-validator.php:148
 msgid "Deprecated settings are used."
@@ -677,15 +677,15 @@ msgstr "Zone de texte"
 
 #: modules/text.php:296
 msgid "This field requires author's URL"
-msgstr "Ce champ nécessite l’URL de l’auteur."
+msgstr "Ce champ nécessite l’URL de l’auteur/autrice."
 
 #: modules/text.php:291
 msgid "This field requires author's email address"
-msgstr "Ce champ nécessite l’adresse e-mail de l’auteur."
+msgstr "Ce champ nécessite l’adresse e-mail de l’auteur/autrice."
 
 #: modules/text.php:286
 msgid "This field requires author's name"
-msgstr "Ce champ nécessite le nom de l’auteur."
+msgstr "Ce champ nécessite le nom de l’auteur/autrice."
 
 #: modules/text.php:278 modules/text.php:281
 #: admin/includes/welcome-panel.php:32
@@ -1189,7 +1189,7 @@ msgstr "Il y a également des balises d’e-mail spéciales avec un nom spécifi
 
 #: admin/includes/help-tabs.php:78
 msgid "A mail-tag is also a short code enclosed in square brackets that you can use in every Mail and Mail (2) field. A mail-tag represents a user input value through an input field of a corresponding form-tag."
-msgstr "Une balise d’e-mail est un code court entouré de crochets que vous pouvez utiliser dans chaque champ e-mail et e-mail (2). Une balise d’e-mail représente la valeur saisie par un utilisateur dans la balise de formulaire correspondante."
+msgstr "Une balise d’e-mail est un code court entouré de crochets que vous pouvez utiliser dans chaque champ e-mail et e-mail (2). Une balise d’e-mail représente la valeur saisie par un utilisateur ou une utilisatrice dans la balise de formulaire correspondante."
 
 #: admin/includes/help-tabs.php:76
 msgid "While form-tags have a comparatively complex syntax, you don&#8217;t need to know the syntax to add form-tags because you can use the straightforward tag generator (<strong>Generate Tag</strong> button on this screen)."
@@ -1213,7 +1213,7 @@ msgstr "<strong>E-mail (2)</strong> est un modèle d’e-mail additionnel qui fo
 
 #: admin/includes/help-tabs.php:70
 msgid "<strong>Mail</strong> manages a mail template (headers and message body) that this contact form will send when users submit it. You can use Contact Form 7&#8217;s mail-tags here."
-msgstr "<strong>E-mail</strong> gère un modèle d’e-mail (en-têtes et corps du message) que ce formulaire de contact enverra lorsqu’un utilisateur l’utilisera. Vous pouvez y utiliser les balises d’e-mail Contact Form 7."
+msgstr "<strong>E-mail</strong> gère un modèle d’e-mail (en-têtes et corps du message) que ce formulaire de contact enverra lorsqu’une personne l’utilisera. Vous pouvez y utiliser les balises d’e-mail Contact Form 7."
 
 #: admin/includes/help-tabs.php:69
 msgid "<strong>Form</strong> is a content of HTML form. You can use arbitrary HTML, which is allowed inside a form element. You can also use Contact Form 7&#8217;s form-tags here."
@@ -1336,7 +1336,7 @@ msgstr "Date"
 
 #: admin/includes/class-contact-forms-list-table.php:14
 msgid "Author"
-msgstr "Auteur"
+msgstr "Auteur/autrice"
 
 #: admin/includes/class-contact-forms-list-table.php:13
 msgid "Shortcode"

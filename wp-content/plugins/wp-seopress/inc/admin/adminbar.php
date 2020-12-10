@@ -21,6 +21,18 @@ if (!function_exists('seopress_global_noindex_option')) {
 	}
 }
 
+//Noindex alert?
+function seopress_advanced_appearance_adminbar_noindex_option() {
+	$seopress_advanced_appearance_adminbar_noindex_option = get_option("seopress_advanced_option_name");
+	if ( ! empty ( $seopress_advanced_appearance_adminbar_noindex_option ) ) {
+		foreach ($seopress_advanced_appearance_adminbar_noindex_option as $key => $seopress_advanced_appearance_adminbar_noindex_value)
+			$options[$key] = $seopress_advanced_appearance_adminbar_noindex_value;
+		if (isset($seopress_advanced_appearance_adminbar_noindex_option['seopress_advanced_appearance_adminbar_noindex'])) { 
+			return $seopress_advanced_appearance_adminbar_noindex_option['seopress_advanced_appearance_adminbar_noindex'];
+		}
+	}
+}
+
 /**
  * Admin bar customization
  */
@@ -32,61 +44,77 @@ function seopress_admin_bar_links() {
 			$title = '<span class="ab-icon icon-seopress-seopress"></span> '.__( 'SEO', 'wp-seopress' );
 			$title = apply_filters('seopress_adminbar_icon',$title);
 
-			if (seopress_global_noindex_option()=='1' || get_option('blog_public') !='1') {
-				$title .= '<span class="wrap-seopress-noindex">';
-				$title .= '<span class="ab-icon dashicons dashicons-hidden"></span>';
-				$title .= __('noindex is on!', 'wp-seopress');
-				$title .= '</span>';
+			$noindex = '';
+			if (seopress_advanced_appearance_adminbar_noindex_option() !='1') {
+				
+				if (seopress_global_noindex_option()=='1' || get_option('blog_public') !='1') {
+					$noindex .= '<a class="wrap-seopress-noindex" href="'.admin_url( 'admin.php?page=seopress-titles#tab=tab_seopress_titles_advanced' ).'">';
+					$noindex .= '<span class="ab-icon dashicons dashicons-hidden"></span>';
+					$noindex .= __('noindex is on!', 'wp-seopress');
+					$noindex .= '</a>';
+				}
+				$noindex = apply_filters('seopress_adminbar_noindex',$noindex);
 			}
 
 			// Adds a new top level admin bar link and a submenu to it
 			$wp_admin_bar->add_menu( array(
 				'parent'	=> false,
 				'id'		=> 'seopress_custom_top_level',
-				'title'		=> $title,
+				'title'		=> $title.$noindex,
 				'href'		=> admin_url( 'admin.php?page=seopress-option' ),
 			));
 
 			//noindex/nofollow per CPT
-			if (function_exists('get_current_screen') && get_current_screen()->post_type !='') {
-				$robots = '';
+			if (function_exists('get_current_screen') && get_current_screen() != NULL) {
+				if (get_current_screen()->post_type || get_current_screen()->taxonomy) {
+					$robots = '';
 
-				$options = get_option( 'seopress_titles_option_name' );
-			
-				$noindex = isset($options['seopress_titles_single_titles'][get_current_screen()->post_type]['noindex']);
-				$nofollow = isset($options['seopress_titles_single_titles'][get_current_screen()->post_type]['nofollow']);
-
-				$robots .= '<span class="wrap-seopress-cpt-seo">'.sprintf(__('SEO for %s','wp-seopress'), get_current_screen()->post_type).'</span>';
-				$robots .= '<span class="wrap-seopress-cpt-noindex">';
+					$options = get_option( 'seopress_titles_option_name' );
 				
-				if ($noindex === true) {
-					$robots .= '<span class="ab-icon dashicons dashicons-marker on"></span>';
-					$robots .= __('noindex is on!', 'wp-seopress');
-				} else {
-					$robots .= '<span class="ab-icon dashicons dashicons-marker off"></span>';
-					$robots .= __('noindex is off.', 'wp-seopress');
+					if (get_current_screen()->taxonomy) {
+						$noindex = isset($options['seopress_titles_single_titles'][get_current_screen()->taxonomy]['noindex']);
+						$nofollow = isset($options['seopress_titles_single_titles'][get_current_screen()->taxonomy]['nofollow']);
+					} else {
+						$noindex = isset($options['seopress_titles_single_titles'][get_current_screen()->post_type]['noindex']);
+						$nofollow = isset($options['seopress_titles_single_titles'][get_current_screen()->post_type]['nofollow']);
+					}
+					
+					if (get_current_screen()->taxonomy) {
+						$robots .= '<span class="wrap-seopress-cpt-seo">'.sprintf(__('SEO for "%s"','wp-seopress'), get_current_screen()->taxonomy).'</span>';
+					} else {
+						$robots .= '<span class="wrap-seopress-cpt-seo">'.sprintf(__('SEO for "%s"','wp-seopress'), get_current_screen()->post_type).'</span>';
+					}
+					$robots .= '<span class="wrap-seopress-cpt-noindex">';
+					
+					if ($noindex === true) {
+						$robots .= '<span class="ab-icon dashicons dashicons-marker on"></span>';
+						$robots .= __('noindex is on!', 'wp-seopress');
+					} else {
+						$robots .= '<span class="ab-icon dashicons dashicons-marker off"></span>';
+						$robots .= __('noindex is off.', 'wp-seopress');
+					}
+					
+					$robots .= '</span>';
+
+					$robots .= '<span class="wrap-seopress-cpt-nofollow">';
+					
+					if ($nofollow === true) {
+						$robots .= '<span class="ab-icon dashicons dashicons-marker on"></span>';
+						$robots .= __('nofollow is on!', 'wp-seopress');
+					} else {
+						$robots .= '<span class="ab-icon dashicons dashicons-marker off"></span>';
+						$robots .= __('nofollow is off.', 'wp-seopress');
+					}
+					
+					$robots .= '</span>';
+
+					$wp_admin_bar->add_menu( array(
+						'parent'	=> 'seopress_custom_top_level',
+						'id'		=> 'seopress_custom_sub_menu_meta_robots',
+						'title'		=> $robots,
+						'href'		=> admin_url( 'admin.php?page=seopress-titles' ),
+					));
 				}
-				
-				$robots .= '</span>';
-
-				$robots .= '<span class="wrap-seopress-cpt-nofollow">';
-				
-				if ($nofollow === true) {
-					$robots .= '<span class="ab-icon dashicons dashicons-marker on"></span>';
-					$robots .= __('nofollow is on!', 'wp-seopress');
-				} else {
-					$robots .= '<span class="ab-icon dashicons dashicons-marker off"></span>';
-					$robots .= __('nofollow is off.', 'wp-seopress');
-				}
-				
-				$robots .= '</span>';
-
-				$wp_admin_bar->add_menu( array(
-					'parent'	=> 'seopress_custom_top_level',
-					'id'		=> 'seopress_custom_sub_menu_meta_robots',
-					'title'		=> $robots,
-					'href'		=> admin_url( 'admin.php?page=seopress-titles' ),
-				));
 			}
 			
 			$wp_admin_bar->add_menu( array(
