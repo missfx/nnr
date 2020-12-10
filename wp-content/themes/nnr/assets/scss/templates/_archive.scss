@@ -1,1 +1,41 @@
 /* Archives */
+
+.actualite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    #first {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+
+    article {
+        width: inherit;
+        display: flex;
+        .side {
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+    article:nth-child(odd) {
+        display: flex;
+        flex-direction: row;
+        .side:first-child {
+            margin-right: 30px;
+        }
+    }
+
+    article:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+        .side:first-child {
+            margin-left: 30px;
+        }
+    }
+}

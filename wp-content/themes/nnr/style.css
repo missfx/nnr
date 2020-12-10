@@ -2444,6 +2444,42 @@ body.menu-active #prim-nav {
 }
 
 /* Archives */
+.actualite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.actualite #first {
+  display: flex;
+  flex-direction: column;
+}
+.actualite #first h2 {
+  font-size: 50px;
+  line-height: 60px;
+}
+.actualite article {
+  width: inherit;
+  display: flex;
+}
+.actualite article .side h2 {
+  margin-top: 0;
+}
+.actualite article:nth-child(odd) {
+  display: flex;
+  flex-direction: row;
+}
+.actualite article:nth-child(odd) .side:first-child {
+  margin-right: 30px;
+}
+.actualite article:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.actualite article:nth-child(even) .side:first-child {
+  margin-left: 30px;
+}
+
 /* posts */
 .single-article .entry-content > .alignfull {
   background: #F8CB1C;
