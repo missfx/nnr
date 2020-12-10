@@ -16,7 +16,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-404.css">
+<<<<<<< HEAD
 	<link rel="icon" type="image/png" href=" <?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
+=======
+	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-article.css">
+>>>>>>> 101e3b1402a5c996cd0fb32c0fff0c23b5337e48
 
 	<?php wp_head(); ?>
 </head>
