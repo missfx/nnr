@@ -14,8 +14,7 @@
 
 get_header(); ?>
 
-<main id="primary" class="site-main">
-
+<main class="actualite">
     <?php get_template_part('template-parts/content', 'actualite'); ?>
 </main><!-- #primary -->
 
