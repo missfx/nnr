@@ -1,31 +1,15 @@
 /* Import des variables et des styles globaux */
-@import 'variables/vars',
-				// Structures de base
-				'base/clean',
-				'base/fonts',
-				'base/global',
-				'base/grids',
-				'base/print',
-				'base/blocs',
-
-				// Composants
-				'components/breadcrumb',
-				'components/buttons',
-				'components/carousel',
-				'components/cookiebar',
-				'components/forms',
-				'components/menu',
-				'components/pagination',
-				'components/socials',
-
-				// Elements communs
-				'layouts/header',
-				'layouts/footer',
-
-				// Templates
-				'templates/archive',
-				'templates/post',
-				'templates/page',
-				'templates/home',
-				'templates/404',
-				'templates/bloc';
+@import "variables/vars",
+	// Structures de base
+	"base/clean",
+	"base/fonts", "base/global", "base/grids", "base/print", "base/blocs",
+	// Composants
+	"components/breadcrumb",
+	"components/buttons", "components/carousel", "components/cookiebar", "components/forms", "components/menu",
+	"components/pagination", "components/socials",
+	// Elements communs
+	"layouts/header",
+	"layouts/footer",
+	// Templates
+	"templates/archive",
+	"templates/post", "templates/page", "templates/home", "templates/404", "templates/actualite", "templates/bloc";
